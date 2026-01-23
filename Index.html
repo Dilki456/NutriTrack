@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NutriTrack</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4fff8;
+    }
+
+    header {
+      background-color: #2ecc71;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .search-box {
+      text-align: center;
+      margin: 30px;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #result {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #2ecc71;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>NutriTrack</h1>
+    <p>Track your nutrition, eat healthy</p>
+  </header>
+
+  <section class="search-box">
+    <input type="text" id="foodInput" placeholder="Enter food name..." />
+    <button onclick="searchFood()">Search</button>
+  </section>
+
+  <section id="result"></section>
+
+  <footer>
+    <p>NutriTrack</p>
+  </footer>
+
+  <script>
+    function searchFood() {
+      const food = document.getElementById("foodInput").value.toLowerCase();
+      const resultDiv = document.getElementById("result");
+
+      if (food === "") {
+        resultDiv.innerHTML = "<p>Please enter a food name.</p>";
+        return;
+      }
+
+      const foodData = {
+        apple: { calories: 52, protein: "0.3g", carbs: "14g" },
+        banana: { calories: 96, protein: "1.3g", carbs: "27g" },
+        rice: { calories: 130, protein: "2.7g", carbs: "28g" }
+      };
+
+      if (foodData[food]) {
+        const data = foodData[food];
+        resultDiv.innerHTML = `
+          <div class="card">
+            <h3>${food.toUpperCase()}</h3>
+            <p>Calories: ${data.calories} kcal</p>
+            <p>Protein: ${data.protein}</p>
+            <p>Carbohydrates: ${data.carbs}</p>
+          </div>
+        `;
+      } else {
+        resultDiv.innerHTML = `
+          <div class="card">
+            <p>No data found for <b>${food}</b></p>
+          </div>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
