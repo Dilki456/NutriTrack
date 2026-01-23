@@ -7,14 +7,14 @@ It is imperative that the system be able to indicate gaps with regard to vitamin
 The system will be able to recommend foods for improved nutrition as per their BMI.
 The system will display the result for daily nutrition consumption clearly to get idea about the how many calories and what neutrinos got by users.
 
-Student 1: K.S.D Ishari – ITBIN-2312-0009
+- Student 1: K.S.D Ishari – ITBIN-2312-0009
   Role: Repository / Frontend 
 
 - Student 2: D.U Mathotaarachchi – ITBIN-2312-0014
   Role: Backend 
 
 - Student 3: K.G.B.P Jayalath – ITBIN-2312-0011
-  Role: Devops
+  Role: DevOps
 
 -Features-
   Food search
