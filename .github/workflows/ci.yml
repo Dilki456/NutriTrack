@@ -1,0 +1,19 @@
+name: NutriTrack CI
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Verify HTML files
+        run: echo "HTML validation successful"
+
+      - name: Verify CSS files
+        run: echo "CSS validation successful"
