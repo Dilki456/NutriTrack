@@ -30,3 +30,22 @@ The system will display the result for daily nutrition consumption clearly to ge
 -Data Source-
   Kaggle Nutrition Dataset
 
+-NutriTrack - Dockerized Version-
+     This application is containerized using Docker to ensure consistent deployment across environments.
+
+-Docker Files Included
+  Dockerfile
+  docker-compose.yml
+  .dockerignore
+
+-Run with Docker
+
+-Build and Start
+  docker-compose up --build
+
+-Open in Browser
+  http://127.0.0.1:9000
+
+-Stop
+  docker-compose down
+  
