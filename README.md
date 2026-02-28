@@ -36,8 +36,8 @@ main
      This application is containerized using Docker to ensure consistent deployment across environments.
 
 -Docker Files Included
-  Dockerfile
-  docker-compose.yml
+   Dockerfile
+   docker-compose.yml
   .dockerignore
 
 -Run with Docker
