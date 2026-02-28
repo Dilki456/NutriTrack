@@ -32,21 +32,21 @@ main
 -Data Source -
   Kaggle Nutrition Dataset
 
--NutriTrack - Dockerized Version-
+-NutriTrack - Dockerized Version -:
      This application is containerized using Docker to ensure consistent deployment across environments.
 
--Docker Files Included
+-Docker Files Included: 
    Dockerfile
    docker-compose.yml
   .dockerignore
 
 -Run with Docker
 
--Build and Start
+-Build and Start -:
   docker-compose up --build
 
--Open in Browser
+-Open in Browser -:
   http://127.0.0.1:9000
 
--Stop
+-Stop -:
   docker-compose down
