@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  nutrutrack:
+    build: .
+    container_name: nutrutrack_app
+    ports:
+      - "9000:80"
+    restart: unless-stopped
